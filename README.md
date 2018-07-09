@@ -6,7 +6,7 @@ By [Shifeng Zhang](http://www.cbsr.ia.ac.cn/users/sfzhang/), [Longyin Wen](http:
 
 ### Introduction
 
-We propose a novel single-shot based detector, called RefineDet, that achieves better accuracy than two-stage methods and maintains comparable efficiency of one-stage methods. You can use the code to train/evaluate the RefineDet method for object detection. For more details, please refer to our [arXiv paper](https://arxiv.org/pdf/1711.06897.pdf).
+We propose a novel single-shot based detector, called RefineDet, that achieves better accuracy than two-stage methods and maintains comparable efficiency of one-stage methods. You can use the code to train/evaluate the RefineDet method for object detection. For more details, please refer to our [paper](https://arxiv.org/pdf/1711.06897.pdf).
 
 <p align="left">
 <img src="https://github.com/sfzhang15/RefineDet/blob/master/refinedet_structure.jpg" alt="RefineDet Structure" width="777px">
@@ -33,11 +33,11 @@ _Note: RefineDet300+ and RefineDet512+ are evaluated with the multi-scale testin
 
 Please cite our paper in your publications if it helps your research:
 
-    @article{zhang2017single,
+    @inproceedings{zhang2018single,
       title = {Single-Shot Refinement Neural Network for Object Detection},
       author = {Zhang, Shifeng and Wen, Longyin and Bian, Xiao and Lei, Zhen and Li, Stan Z.},
-      booktitle = {arxiv preprint arXiv:1711.06897},
-      year = {2017}
+      booktitle = {CVPR},
+      year = {2018}
     }
 
 ### Contents
@@ -126,7 +126,10 @@ Please cite our paper in your publications if it helps your research:
 
 4. Check out [`test/refinedet_demo.py`](https://github.com/sfzhang15/RefineDet/blob/master/test/refinedet_demo.py) on how to detect objects using the RefineDet model and how to plot detection results.
   ```Shell
+  # For GPU users
   python test/refinedet_demo.py
+  # For CPU users
+  python test/refinedet_demo.py --gpu_id -1
   ```
 
 5. Evaluate the trained models via [`test/refinedet_test.py`](https://github.com/sfzhang15/RefineDet/blob/master/test/refinedet_test.py).
